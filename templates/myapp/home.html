@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+  <h1>Welcome to the Home Page</h1>
+
+  <button id="load-content-btn">Load AJAX Content</button>
+
+  <div id="dynamic-content">
+    <p>This is the original content before AJAX call.</p>
+  </div>
+{% endblock %}

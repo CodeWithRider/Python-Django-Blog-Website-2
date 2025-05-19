@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Signup{% endblock %}
+
+{% block content %}
+     <div class="container">
+        <div class="d-flex justify-content-center align-items-center " style="height: 100vh;">
+
+            <form action="{% url 'signup' %}" class="p-5 shadow" method="post">
+                {% csrf_token %}
+                <h3>SIGNUP</h3>
+                <br>
+                {% for message in messages %}
+                <p class="text-danger text-center">{{message}}</p>
+                {% endfor %}
+                <label for="" class="form-label">Username</label>
+                <div class="input-group mt-1">
+                    <span class="input-group-text">@</span>
+                    <input type="text" class="form-control" name="username" required>
+                </div>
+                <label for="" class="form-label mt-3">Email</label>
+                <input type="email" class="form-control" name="email" required>
+                <label for="" class="form-label mt-3">Password</label>
+                <input type="password" class="form-control" name="password" required>
+                <label for="" class="form-label mt-3">Confirm Password</label>
+                <input type="password" class="form-control" name="password2" required>
+                <button class="btn">Signup</button>
+                <p class="para">Have an account ?
+                    <a href="{% url 'signin' %}"> Login</a>
+                </p>
+
+
+            </form>
+
+        </div>
+    </div>
+{% endblock %}

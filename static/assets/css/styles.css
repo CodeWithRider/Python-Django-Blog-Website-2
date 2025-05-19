@@ -1,0 +1,180 @@
+/* Define CSS Variables */
+:root {
+    --primary-color: rgb(162, 223, 175);
+    --hover-text:  #618f67;
+    --secondary-color: rgb(158, 177, 92);
+    --hover-color: transparent;
+    --text-color: #fff;
+    --link-color: #6e9ce0;
+    --muted-text: #919aa3;
+    --background-color: #f9f9fa;
+    --border-color: #e0e0e0;
+    --box-shadow-light: 0 1px 20px 0 rgba(69, 90, 100, 0.08);
+    --box-shadow-dark: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* General Styles */
+body {
+    background-color: var(--background-color);
+    width: 100vw;
+    height: 100vh;
+}
+.theme_color{
+    color: var(--primary-color); 
+}
+
+.padding {
+    padding: 1rem;
+}
+
+/* Carousel Image */
+.carousel img {
+    width: 100%;
+    height: 700px;
+}
+
+.carousel-item {
+    transition: transform 1s ease-in-out; /* Smooth sliding effect */
+  }
+  
+
+/* Blog Post Images */
+.blog-posts .blog-post img,
+.blog-post img {
+    height: 300px;
+}
+
+/* Forms */
+form {
+    margin-top: 200px;
+    width: 50%;
+}
+
+@media screen and (max-width:600px) {
+    form {
+        width: 100%;
+    }
+}
+
+/* Headings */
+h3 {
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+.btn {
+    margin-top: 30px;
+    background: var(--secondary-color);
+    width: 100%;
+    color: var(--text-color);
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: var(--hover-text);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: var(--link-color);
+}
+
+a:hover {
+    color: var(--primary-color);
+    letter-spacing: 1px;
+}
+
+/* Card Styles */
+.card {
+    border-radius: 5px;
+    box-shadow: var(--box-shadow-light);
+    border: none;
+    margin-bottom: 30px;
+    padding: 50px;
+}
+
+.card-shadow {
+    border-radius: 10px;
+    box-shadow: var(--box-shadow-dark);
+}
+
+/* User Profile Card */
+.user-card-full {
+    overflow: hidden;
+}
+
+.user-card-full .user-profile {
+    border-radius: 5px 0 0 5px;
+}
+
+.user-profile {
+    padding: 20px 0;
+}
+
+.bg-c-lite-green {
+    background: linear-gradient(to top, #4b35d9, #eb31a7);
+    box-shadow: var(--box-shadow-light);
+}
+
+.img-radius {
+    border-radius: 5px;
+}
+
+/* Typography */
+p {
+    line-height: 25px;
+    font-size: 14px;
+}
+
+.text-muted {
+    color: var(--muted-text) !important;
+}
+
+/* Borders */
+.b-b-default {
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Margins & Padding */
+.m-b-10 {
+    margin-bottom: 10px;
+}
+
+.m-b-20 {
+    margin-bottom: 20px;
+}
+
+.m-t-40 {
+    margin-top: 20px;
+}
+
+.p-b-5 {
+    padding-bottom: 5px !important;
+}
+
+/* Social Links */
+.user-card-full .social-link li {
+    display: inline-block;
+}
+
+.user-card-full .social-link li a {
+    font-size: 20px;
+    margin: 0 10px 0 0;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Responsive Padding */
+@media screen and (max-width:600px) {
+    .padding {
+        padding: 0;
+    }
+}

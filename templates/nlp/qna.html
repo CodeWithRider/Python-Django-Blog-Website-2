@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}NLP{% endblock %}
+{% block content %}
+<div class="container mt-4">
+  <h2>QnA using BERT</h2>
+  <form method="POST">
+    {% csrf_token %}
+    <div class="form-group">
+      <label>Paragraph:</label>
+      <textarea name="paragraph" class="form-control" rows="6" required>{{ paragraph }}</textarea>
+    </div>
+    <div class="form-group">
+      <label>Question:</label>
+      <input type="text" name="question" class="form-control" required value="{{ question }}">
+    </div>
+    <button type="submit" class="btn btn-primary mt-2">Get Answer</button>
+  </form>
+
+  {% if answer %}
+  <div class="mt-4 alert alert-success">
+    <strong>Answer:</strong> {{ answer }} <br>
+    <small>Confidence: {{ score|floatformat:2 }}</small>
+  </div>
+  {% endif %}
+</div>
+{% endblock %}
